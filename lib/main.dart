@@ -54,7 +54,7 @@ class MyProject extends StatelessWidget {
               ),
             ),
             Text(
-              'Age',
+              'Passion',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 color: Colors.white,
@@ -62,13 +62,28 @@ class MyProject extends StatelessWidget {
               ),
             ),
             Text(
-              '20',
+              'Chess',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 color: Colors.amberAccent,
                 fontSize: 30.0,
               ),
             ),
+            
+            Row(
+              children: <Widget>[
+                Text(
+                  'Passion',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                    fontSize: 20.0,
+                  ),
+                ),
+                Image(image: AssetImage('android/assets/cover_image.jpg'))
+              ],
+            )
+
           ],
         ),
       ),
