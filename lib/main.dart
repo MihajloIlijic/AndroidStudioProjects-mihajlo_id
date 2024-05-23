@@ -5,7 +5,6 @@ void main() => runApp(MaterialApp(
     ));
 
 class MyProject extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -69,21 +68,25 @@ class MyProject extends StatelessWidget {
                 fontSize: 30.0,
               ),
             ),
-            
             Row(
               children: <Widget>[
-                Text(
-                  'Passion',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                    fontSize: 20.0,
+                Expanded(
+                  flex: 3,
+                  child: Text(
+                    'Image of passion:',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                      fontSize: 20.0,
+                    ),
                   ),
                 ),
-                Image(image: AssetImage('android/assets/cover_image.jpg'))
+                Expanded(
+                  flex: 2,
+                    child: Image(
+                        image: AssetImage('android/assets/cover_image.jpg')))
               ],
             )
-
           ],
         ),
       ),
