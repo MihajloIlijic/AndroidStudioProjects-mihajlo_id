@@ -29,7 +29,7 @@ class MyProject extends StatelessWidget {
               ),
             ),
             Text(
-              'Mihajlo Ilijic',
+              'Mihajlo Iliic',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 color: Colors.amberAccent,
