@@ -4,7 +4,16 @@ void main() => runApp(MaterialApp(
       home: MyProject(),
     ));
 
-class MyProject extends StatelessWidget {
+class MyProject extends StatefulWidget {
+  @override
+  State<MyProject> createState() => _MyProjectState();
+}
+
+class _MyProjectState extends State<MyProject> {
+
+  int rating = 1600;
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -14,6 +23,14 @@ class MyProject extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.grey[600],
         elevation: 0.0,
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){setState(() {
+          rating ++;
+        }); },
+        child: Icon(Icons.add),
+        backgroundColor: Colors.red,
+
       ),
       body: Padding(
         padding: EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0.0),
@@ -29,7 +46,7 @@ class MyProject extends StatelessWidget {
               ),
             ),
             Text(
-              'Mihajlo Iliic',
+              'Mihajlo Ilijic',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 color: Colors.amberAccent,
@@ -52,6 +69,7 @@ class MyProject extends StatelessWidget {
                 fontSize: 30.0,
               ),
             ),
+            /*SizedBox(height: 30.0,),*/
             Text(
               'Passion',
               style: TextStyle(
@@ -85,6 +103,28 @@ class MyProject extends StatelessWidget {
                   flex: 2,
                     child: Image(
                         image: AssetImage('android/assets/cover_image.jpg')))
+              ],
+            ),
+            SizedBox(height: 15.0,),
+            Row(
+              children: <Widget> [
+                Text(
+                  'ELO-Rating:',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                    fontSize: 20.0,
+                  ),
+                ),
+                SizedBox(width: 20.0,),
+                Text(
+                  '$rating',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.amberAccent,
+                    fontSize: 30.0,
+                  ),
+                ),
               ],
             )
           ],
